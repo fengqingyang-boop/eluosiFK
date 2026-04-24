@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄罗斯方块 - 特别版</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="title">
+            <h1>俄罗斯方块</h1>
+            <p class="subtitle">特别版 - 创新消除玩法</p>
+        </div>
+        
+        <div class="game-wrapper">
+            <div class="info-panel left">
+                <div class="info-box">
+                    <h3>下一个</h3>
+                    <canvas id="nextCanvas" width="120" height="120"></canvas>
+                </div>
+                <div class="info-box">
+                    <h3>分数</h3>
+                    <div class="score-display" id="score">0</div>
+                </div>
+                <div class="info-box">
+                    <h3>等级</h3>
+                    <div class="level-display" id="level">1</div>
+                </div>
+            </div>
+            
+            <div class="game-area">
+                <canvas id="gameCanvas" width="300" height="600"></canvas>
+                <div class="game-overlay" id="gameOverlay">
+                    <div class="overlay-content">
+                        <h2 id="overlayTitle">游戏结束</h2>
+                        <p id="overlayText">按空格键重新开始</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-panel right">
+                <div class="info-box controls">
+                    <h3>操作说明</h3>
+                    <div class="control-item">
+                        <span class="key">←</span>
+                        <span>左移</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">→</span>
+                        <span>右移</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">↑</span>
+                        <span>旋转</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">↓</span>
+                        <span>加速下落</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">空格</span>
+                        <span>直接落下</span>
+                    </div>
+                    <div class="control-item special">
+                        <span class="key">鼠标</span>
+                        <span>消除模式下拖动消除方块</span>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3>当前状态</h3>
+                    <div class="mode-display" id="modeDisplay">游戏中</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-status" id="gameStatus">
+            <span id="statusText">准备开始游戏...</span>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
