@@ -245,8 +245,7 @@ function clearLines() {
 function enterClearMode() {
     isClearMode = true;
     updateModeDisplay();
-    updateStatus('进入消除模式！按住鼠标左键拖动消除方块');
-    showOverlay('消除模式', '按住鼠标左键拖动消除方块');
+    updateStatus('进入消除模式！按住鼠标左键拖动消除方块，或者点击单个方块消除');
     draw();
 }
 
